@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Parcel Sandbox</title>
+		<meta charset="UTF-8" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+			crossorigin="anonymous"
+		/>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="search-bar">
+				<input type="text" placeholder="Enter City..." id="submit-value" />
+				<button id="btn">Search</button>
+			</div>
+			<div class="form-check form-switch">
+				<input class="form-check-input" type="checkbox" id="switch" />
+				<label class="form-check-label">C°/F°</label>
+			</div>
+
+			<div class="row">
+				<div class="col-6">
+					<div class="todays-weather">
+						<h1>Today in <span id="title">Vancouver</span></h1>
+						<div class="crnt-weather">
+							<div class="circle">
+								<i><span>🌨</span></i>
+							</div>
+							<div class="info">
+								<p class="temp" id="temp">-15°C/-10°C</p>
+								<p id="conditions">Heavy snow</p>
+								<p>real feel <span id="realFeel">-20</span>°C</p>
+							</div>
+							<button id="localWeather" class="weather-btn">
+								Local Weather
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="future-weather">
+						<h2>5 day forecast</h2>
+						<div class="boxes">
+							<div class="row1">
+								<div class="box A">
+									<h3>Mon</h3>
+									<i>☀</i>
+									<p>-10/-8°C</p>
+								</div>
+								<div class="box B">
+									<h3>Tue</h3>
+									<i>☀</i>
+									<p>-12/-8°C</p>
+								</div>
+								<div class="box C">
+									<h3>Wed</h3>
+									<i>☀</i>
+									<p>-14/-10°C</p>
+								</div>
+							</div>
+							<div class="row2">
+								<div class="box D">
+									<h3>Thu</h3>
+									<i>☀</i>
+									<p>-10/-7°C</p>
+								</div>
+								<div class="box E">
+									<h3>Fri</h3>
+									<i>☀</i>
+									<p>-10/-6°C</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<small id="crnt-date" class="crnt-date"></small>
+		</div>
+
+		<small>Coded by Sophie Randall</small>
+
+		<script src="script.js"></script>
+	</body>
+</html>

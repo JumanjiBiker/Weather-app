@@ -1,0 +1,183 @@
+body {
+	font-family: monospace;
+	width: 90vw;
+	height: 90vh;
+	text-align: center;
+	color: rgb(91, 113, 116);
+}
+
+.container {
+	background-image: linear-gradient(
+		-225deg,
+		#66a4ad 0%,
+		rgb(215, 218, 223) 48%,
+		#c4e0e5 100%
+	);
+	border: 2px solid #66a4ad;
+	width: 1106px;
+	margin: 35px auto;
+	height: 80vh;
+	border-radius: 5px;
+}
+
+.search-bar {
+	padding-top: 30px;
+	margin: 0 auto 30px;
+	height: 50px;
+}
+.search-bar input {
+	width: 550px;
+	height: 35px;
+	border: none;
+	font-size: 20px;
+	border-radius: 10px;
+}
+
+.search-bar button {
+	border-radius: 10px;
+	padding: 0 15px;
+	margin: 0;
+	height: 35px;
+	font-size: 17px;
+	cursor: pointer;
+	border: #66a4ad;
+}
+
+.search-bar button:hover {
+	background: #66a4ad;
+	color: #fff;
+	border: none;
+}
+
+.form-switch,
+.form-check {
+	width: 50px;
+	font-size: 14px;
+	color: #66a4ad;
+	position: absolute;
+	right: 450px;
+}
+
+.form-check-input {
+	border: 1px solid #66a4ad;
+}
+
+.row {
+	padding-top: 30px;
+}
+
+.todays-weather {
+	width: 550px;
+	height: 450px;
+	margin: 0px;
+	display: block;
+	border-right: 2px solid rgba(116, 101, 101, 0.641);
+}
+
+h1 {
+	letter-spacing: 1.2px;
+	padding-bottom: 20px;
+	font-size: 33px;
+	text-align: center;
+	font-weight: 600;
+}
+
+.circle {
+	height: 150px;
+	border-radius: 50%;
+	background: rgb(210, 214, 214);
+	border: 5px solid #66a4ad;
+	width: 150px;
+	padding: 20px;
+	margin: 20px auto 0;
+}
+
+.circle i {
+	font-size: 130px;
+	position: relative;
+	bottom: 40px;
+	right: 31px;
+}
+
+.temp {
+	font-size: 26px;
+	letter-spacing: 1.2px;
+	text-align: center;
+}
+
+.info {
+	font-size: 20px;
+	text-align: center;
+}
+
+.vl {
+	display: block;
+	border-left: 6px solid green;
+	height: 430px;
+}
+
+.future-weather {
+	display: block;
+	height: 450px;
+	border-left: 2px solid rgba(116, 101, 101, 0.641);
+	margin-bottom: 10px;
+}
+
+.future-weather h2 {
+	text-align: center;
+	letter-spacing: 1.2px;
+	font-size: 30px;
+	font-weight: 600;
+}
+
+.row1 {
+	display: flex;
+	justify-content: space-between;
+}
+
+.row2 {
+	display: flex;
+	justify-content: space-around;
+}
+
+.box {
+	height: 120px;
+	width: 120px;
+	margin: 30px;
+	text-align: center;
+	font-size: 20px;
+	border-radius: 10px;
+}
+
+.box i {
+	font-size: 55px;
+	position: relative;
+	right: 7px;
+}
+
+i {
+	color: rgb(65, 63, 63);
+}
+
+p a {
+	bottom: 700px;
+}
+
+.crnt-date {
+	color: #66a4ad;
+	font-size: 15px;
+}
+
+small {
+	color: rgba(170, 162, 162, 0.6);
+}
+
+.weather-btn {
+	border-radius: 10px;
+	background: #66a4ad;
+	color: white;
+	height: 30px;
+	font-size: 18px;
+	margin: 10px;
+	border: 1px solid #fff;
+}
