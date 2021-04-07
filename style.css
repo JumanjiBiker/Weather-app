@@ -186,21 +186,3 @@ small {
 	color: #fff;
 	border: 1px solid #fff;
 }
-
-.unit {
-	color: #fff;
-	background: #66a4ad;
-	height: 25px;
-	width: 25px;
-	border-radius: 10px;
-	border: 1px solid #66a4ad;
-	margin-bottom: 10px;
-	text-align: left;
-	padding: 3px;
-	margin-left: 20px;
-}
-
-.unit:hover {
-	background: #fff;
-	color: #66a4ad;
-}
