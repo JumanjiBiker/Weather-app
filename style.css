@@ -92,6 +92,7 @@ h1 {
 	position: relative;
 	bottom: 27px;
 	right: 27px;
+	color: none;
 }
 
 .temp {
@@ -129,33 +130,29 @@ li {
 	font-weight: 600;
 }
 
-.row1 {
-	display: flex;
-	justify-content: space-between;
+.row .forecast {
+	padding: none;
 }
 
-.row2 {
+.boxes{
 	display: flex;
-	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
 .box {
-	height: 120px;
+	height: 180px;
 	width: 120px;
-	margin: 30px;
+	margin: 0 20px 10px;
 	text-align: center;
 	font-size: 20px;
 	border-radius: 10px;
+	border: 1px solid #fff;
 }
 
-.box i {
-	font-size: 55px;
-	position: relative;
-	right: 7px;
-}
-
-i {
-	color: rgb(65, 63, 63);
+.box img {
+	height: 100px;
+	width: 100px;
+	
 }
 
 p a {
@@ -185,4 +182,10 @@ small {
 	background: #66a4ad;
 	color: #fff;
 	border: 1px solid #fff;
+}
+
+.fa-location-arrow:before {
+    position: relative;
+    bottom: -2px;
+		left: -1px;
 }

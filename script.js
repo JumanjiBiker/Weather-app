@@ -1,5 +1,16 @@
-//update the weather live
+//getting the longitude and latitude for forecast
 
+function getForecast(coordinates) {
+
+	let apiKey = "27a45e93cf87c55d3ceeaccda8173814";
+	let api = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+
+	axios.get(api).then(displayForecast);
+	console.log(api);
+}
+
+
+//update the weather live
 
 function showWeather(response) {
 	let city = response.data.name;
@@ -22,7 +33,44 @@ function showWeather(response) {
 	humidity.innerHTML = `${response.data.main.humidity}`;
 	windSpeed.innerHTML = Math.round(response.data.wind.speed);
 	mainIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+
+	getForecast(response.data.coord)
 }
+
+//getting the forecast
+
+function formatDay(timestamp) {
+	let date = new Date(timestamp * 1000)
+	let day = date.getDay();
+	let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+	return days[day];
+}
+
+function displayForecast(response) {
+	let forecast = response.data.daily;
+
+	let forecastElement = document.getElementById("boxes");
+	let forecastHTML = "";
+
+	forecast.forEach(function (forecastDay, idx) {
+
+		if (idx < 6) {
+
+			forecastHTML = forecastHTML + `
+	<div class="box" id="box">
+		<h3 id="forecast-day">${formatDay(forecastDay.dt)}</h3>
+		<img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png">
+		<p id="forecast-temp">${Math.round(forecastDay.temp.max)}/${Math.round(forecastDay.temp.min)}</p>
+	</div>
+	`;
+		}
+	});
+
+	forecastElement.innerHTML = forecastHTML;
+};
+
+
 
 
 //search engine
@@ -34,7 +82,7 @@ function search(city) {
 
 	axios.get(api).then(showWeather);
 }
-search("vancouver");
+search("singapore");
 
 function handleSubmit(event) {
 	event.preventDefault();
@@ -44,8 +92,6 @@ function handleSubmit(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit)
-
-
 
 
 //local weather
@@ -102,3 +148,6 @@ let months = [
 let month = months[now.getMonth()];
 
 crntDate.innerHTML = `${hour}:${mins} ${day} ${date} ${month}`;
+
+let boxD = documnent.querySelector("box:nth-child(3)");
+boxD.innerHTML = "bugger";
