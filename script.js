@@ -148,6 +148,3 @@ let months = [
 let month = months[now.getMonth()];
 
 crntDate.innerHTML = `${hour}:${mins} ${day} ${date} ${month}`;
-
-let boxD = documnent.querySelector("box:nth-child(3)");
-boxD.innerHTML = "bugger";
